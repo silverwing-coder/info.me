@@ -1,2 +1,2 @@
 # info.me
-Publish personal info and web dev
+Publish personal info and tested web pages
