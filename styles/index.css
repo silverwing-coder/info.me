@@ -1,0 +1,239 @@
+html,
+body {
+  height: 100%;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  background-color: #ffffe0;
+  background-repeat: repeat;
+  line-height: 22px;
+  color: #000;
+}
+#intro-frame {
+  background-image: url("../images/panoramic-sunflower.jpg");
+  height: 250px;
+  width: 1505px;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#my_photo {
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#4245aa, #42455a),
+    radial-gradient(circle at top left, #fd00da, #19d7fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 30px 80px;
+  padding: 1px;
+  filter: grayscale(65%);
+  box-shadow: 0 0 5px 5px rgba(255, 255, 200, 0.9);
+}
+#my_photo:hover {
+  width: 105px;
+  filter: grayscale(0%);
+  box-shadow: 0 0 10px 10px rgba(255, 255, 200, 0.9);
+}
+#my_moto {
+  margin: 0px 15px;
+  font: 25px bolder;
+  color: #afff87;
+}
+#contact-info {
+  top: 30px;
+  left: 650px;
+  position: absolute;
+  font: 20px bolder;
+  color: black;
+  text-align: left;
+}
+.icon-img {
+  border-radius: 30%;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#ffff00, #19d7fa),
+    radial-gradient(circle at top left, #ffff00, #19d7fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+#social-icons {
+  top: 150px;
+  left: 1200px;
+  position: absolute;
+  color: #f0f0f0;
+}
+#social-icons ul {
+  display: inline-flex;
+}
+#social-icons ul li {
+  font-size: 20px;
+  list-style: none;
+  margin-top: 15px;
+  padding: 30px;
+}
+#social-icons ul li a {
+  color: #ffffff;
+  border-radius: 30%;
+  border: 1px solid #999;
+  padding: 5px;
+}
+#profile-name {
+  padding-left: 40px;
+  padding-top: 40px;
+}
+#profile-name h1 {
+  font-size: 40px;
+}
+#profile-name h3 {
+  font-size: 18px;
+  color: darkblue;
+  padding-left: 20px;
+}
+#paper {
+  margin-top: 30px;
+  padding-left: 20px;
+  width: 1480px;
+  align-self: center;
+  border: 5px solid cadetblue;
+  border-radius: 0.5%;
+}
+#f4-img {
+  width: 300px;
+  position: absolute;
+  margin: -15px 550px;
+  border: 2px solid transparent;
+  border-radius: 2%;
+  background-image: linear-gradient(#4245aa, #42455a),
+    radial-gradient(circle at top left, #14a80e, #140fa8);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  caption-side: bottom;
+}
+#f4-img:hover{
+  width: 700px;
+}
+figcaption{
+  width: 400px;
+  display: block;
+  position: absolute;
+  margin: 130px 635px;
+  color: #fd00da;
+}
+.entry {
+  width: 1450px;
+  display: block;
+  padding-top: 50px;
+  clear: both;
+  margin-left: 5px;
+}
+.entry h2 {
+  padding-left: 30px;
+  text-align: left;
+}
+.show-cv {
+  margin-left: 200px;
+  position: absolute;
+  color: #a65a95;
+}
+h2 {
+  width: 250px;
+  height: 25px;
+  text-align: right;
+  float: left;
+  padding: 0;
+  margin: 0;
+  clear: both;
+  font-size: 22px;
+  color: #315a60;
+  margin-bottom: -12px;
+}
+.content {
+  clear: both;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  display: block;
+  padding-top: 20px;
+}
+.content h3 {
+  width: 250px;
+  text-align: left;
+  float: left;
+  padding-left: 60px;
+  clear: both;
+  font-size: 17px;
+  color: #709399;
+}
+.content p {
+  width: 1200px;
+  font-size: 17px;
+  margin-left: 30px;
+  padding-left: 30px;
+}
+.content em {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  color: #777777;
+  display: block;
+  padding-top: 3px;
+  margin-left: 250px;
+}
+.info {
+  float: left;
+  width: 1000px;
+  margin-left: 270px;
+  margin-top: -10px;
+  list-style-type: none;
+}
+.info li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 1000px;
+  background-image: url("/images/bullet.gif");
+  background-repeat: no-repeat;
+  padding-left: 12px;
+  background-position: 0 0.5em;
+}
+.skills {
+  margin: 0;
+  padding: 0;
+  float: left;
+  display: block;
+  width: 1000px;
+  list-style-type: none;
+}
+.skills li {
+  padding: 0;
+  float: left;
+  width: 180px;
+  background-image: url("/images/bullet.gif");
+  background-repeat: no-repeat;
+  padding-left: 12px;
+  background-position: 0 0.5em;
+  margin-top: 10px;
+}
+.works {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 1000px;
+  list-style-type: none;
+}
+.works li {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 300px;
+  background-image: url("/images/bullet.gif");
+  background-repeat: no-repeat;
+  padding-left: 12px;
+  background-position: 0 0.5em;
+  margin-top: 10px;
+}
+.works a {
+  color: blue;
+}
+.works :hover {
+  font-size: 16px;
+  color: #ffff00;
+}
