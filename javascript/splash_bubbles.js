@@ -131,7 +131,7 @@ function setStartCondition() {
   //initialBubbleSize = document.getElementById("range_size").value;
 
   //var bubbleSize = document.getElementById("range_size").value;
-  console.log("bubleSize : " + initialBubbleSize);
+  //console.log("bubleSize : " + initialBubbleSize);
   //var bubbleSpeed = document.getElementById("range_paeed");
 
   bubbleArray.length = 0;
