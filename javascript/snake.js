@@ -53,13 +53,54 @@ class Snake {
     this.body[0].y += this.yspd * this.size;
   }
   show() {
-    fill(0, 255, 0);
+    fill(255, 255, 0);
     for (var i = 1; i < this.body.length; i++) {
-      rect(this.body[i].x, this.body[i].y, this.size-1, this.size-1);
+      rect(this.body[i].x, this.body[i].y, this.size - 1, this.size - 1);
     }
     fill(255, 0, 0);
-    ellipse(this.body[0].x+10, this.body[0].y+10, this.size+1, this.size+1);
-//    this.polygon(this.body[0].x+10, this.body[0].y+10, this.size-9, 7);
+    if (this.xspd === 1) {
+      arc(
+        this.body[0].x + 10,
+        this.body[0].y + 10,
+        this.size + 1,
+        this.size + 1,
+        PI / 4,
+        (PI * 7) / 4
+      );
+    }
+    if (this.xspd === -1) {
+      arc(
+        this.body[0].x + 10,
+        this.body[0].y + 10,
+        this.size + 1,
+        this.size + 1,
+        (PI * 5) / 4,
+        (PI * 3) / 4
+      );
+    }
+    if (this.yspd === -1) {
+      arc(
+        this.body[0].x + 10,
+        this.body[0].y + 10,
+        this.size + 1,
+        this.size + 1,
+        (PI * 7) / 4,
+        (PI * 5) / 4
+      );
+    }
+    if (this.yspd === 1) {
+      arc(
+        this.body[0].x + 10,
+        this.body[0].y + 10,
+        this.size + 1,
+        this.size + 1,
+        (PI * 3) / 4,
+        PI / 4
+      );
+    }
+    //    arc(this.body[0].x+10, this.body[0].y+10, this.size+1, this.size+1)
+    //    ellipse(this.body[0].x+10, this.body[0].y+10, this.size+1, this.size+1);
+    //    this.polygon(this.body[0].x+10, this.body[0].y+10, this.size-9, 7);
   }
   polygon(x, y, radius, npoints) {
     let angle = TWO_PI / npoints;
@@ -80,7 +121,7 @@ class Food {
     this.size = _size;
   }
   show() {
-    fill(255, 255, 0);
+    fill(0, 255, 0);
     rect(this.x, this.y, this.size, this.size);
   }
 }

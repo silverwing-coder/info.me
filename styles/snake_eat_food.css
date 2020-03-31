@@ -1,5 +1,10 @@
 #defaultCanvas0 {
-    margin: 20px 20px;
     padding: 1px 1px;
-    border: 10px blue solid;
+    border: 10px gray solid;
+}
+h1{
+    color: darkblue;
+}
+h2 {
+    color: blue;
 }
