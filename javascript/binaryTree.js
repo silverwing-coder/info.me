@@ -1,5 +1,6 @@
 var tree ;
 var vals;
+var sorted;
 
 document.getElementById("btn_referesh").onclick = function(){
   setup();
@@ -7,6 +8,7 @@ document.getElementById("btn_referesh").onclick = function(){
 function setup() {
   tree = new Tree();
   vals = [];
+  sorted =[];
   createCanvas(800, 600);
   background(50);
   for (let i = 0; i < 15; i++) {
@@ -16,10 +18,13 @@ function setup() {
   }
 //  console.log(tree);
 //  document.write(vals);
-  const valArr = document.getElementById("values");
-  valArr.textContent = "Values : [ " + vals +" ]";
+  const valArr = document.getElementById("source_data");
+  valArr.textContent = "Source Data : [ " + vals +" ]";
   console.log(vals);
   tree.traverse();
+  const sortArr = document.getElementById("sorted_data")
+  sortArr.textContent = "Sorted Data : [ " + sorted +" ]";
+
   // let res = tree.search(10);
   // if(res != null){
   // //    console.log("Found");
@@ -92,6 +97,8 @@ Node.prototype.visit = function(parent) {
     this.left.visit(this);
   }
   console.log("visit : " + this.val + ", level : " + this.level);
+  sorted.push(this.val);
+
   fill(255);
   noStroke();
   textAlign(CENTER);
