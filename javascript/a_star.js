@@ -161,7 +161,7 @@ function draw() {
   } else {
     noLoop();
     console.log("NO SOLUTION");
-    shortest_path.textContent = "There is PATH from Start to End !";
+    shortest_path.textContent = "There is NO-PATH from Start to End !";
     //  nosolution = true;
     //    return;
     //no solution
