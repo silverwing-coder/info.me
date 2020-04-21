@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="javascript/p5.min.js"></script>
+        <link rel="stylesheet" href="styles/genetic_algorithm.css" />
+    </head>
+
+    <body>
+        <div>
+            <p>
+                This page is to intorduce Generic Algorithm to find an Optimal
+                Point. <br />
+                The artificial Optimal Point is the "Target Text" in thi case. <br />
+                We can apply GA to solve diverse problems.
+            </p>
+        </div>
+        <form action="input">
+            <p class="input_window">
+                "Coded by Sangmork Park"  <br><br>            
+                <button type="button" id="reset_btn" onclick="re_start()">RESTART</button> <br><br>
+                Target Text (alphabet + 'space' + '.' + '!' only) : <br>
+                <input type="text" id="target_text" /> <br>
+                MAX Population(Integer) :<input type="text" id="max_popu"/> 
+                , Mutation Rate(0 ~ 1)  :<input type="text" id="mut_rate"/>
+                <br />
+            </p>
+        </form>
+        <script src="javascript/genetic_algorithm/child.js"></script>
+        <script src="javascript/genetic_algorithm/population.js"></script>
+        <script src="javascript/genetic_algorithm/genetic_algorithm.js"></script>
+    </body>
+</html>
