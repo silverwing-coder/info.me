@@ -2,6 +2,7 @@ var data = [];
 
 var m = 1;
 var b = 0;
+var residual = 0;
 
 function setup() {
     createCanvas(600, 600);
@@ -10,7 +11,7 @@ function setup() {
 function draw() {
     background(50);
     stroke(255);
-    fill(255)
+    fill(255);
     line(50, 50, 50, 575);
     line(45, 60, 55, 60);
     line(25, 550, 575, 550);
@@ -20,9 +21,10 @@ function draw() {
     text("0", 30, 575);
     text("x=1", 520, 575);
     textSize(25);
-    fill(255)
-    text("m = "+m, 100, 50)
-    text("b = "+b, 100, 80)
+    fill(255);
+    text("m = " + m, 100, 50);
+    text("b = " + b, 100, 80);
+    text("(re)**2 = " + residual, 100, 110);
     text;
     for (let i = 0; i < data.length; i++) {
         var x = map(data[i].x, 0, 1, 0, width);
@@ -34,8 +36,8 @@ function draw() {
     }
     if (data.length > 1) {
         drawLine();
-        // linearRegression()
-        gradientDescent();
+        linearRegression()
+        // gradientDescent();
     }
 }
 
@@ -67,6 +69,7 @@ function drawLine() {
 function linearRegression() {
     var xsum = 0;
     var ysum = 0;
+    residual = 0;
     for (let i = 0; i < data.length; i++) {
         xsum += data[i].x;
         ysum += data[i].y;
@@ -84,6 +87,14 @@ function linearRegression() {
     }
     m = num / den;
     b = ymean - m * xmean;
+
+    for (let i = 0; i < data.length; i++) {
+        var x = data[i].x;
+        var y = m * x + b;
+        var diff = data[i].y - y;
+        residual += diff * diff;
+    }
+    print(residual);
 }
 
 function gradientDescent() {
